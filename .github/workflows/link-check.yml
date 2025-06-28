@@ -22,8 +22,9 @@ jobs:
       - name: Run lychee on all Markdown files
         run: |
           echo "🔍 Checking links in all .md files..."
-          find . -name "*.md" > markdown-files.txt
-          lychee --verbose --no-progress --exclude-mail --markdown --input markdown-files.txt
+          find . -type f -name "*.md" > markdown-files.txt
+          cat markdown-files.txt
+          lychee --verbose --no-progress --exclude-mail --input markdown-files.txt
 
       - name: Save report as artifact (optional)
         if: failure()
