@@ -9,7 +9,7 @@ on:
 
 jobs:
   link-check:
-    name: Check for Broken Links in Markdown
+    name: Check for Broken Internal and External Links
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +19,41 @@ jobs:
       - name: Install lychee
         uses: lycheeverse/lychee-action@v1.8.0
 
-      - name: Run lychee on all Markdown files
+      - name: Find and check all Markdown links
         run: |
           echo "🔍 Checking links in all .md files..."
-          find . -type f -name "*.md" | tee markdown-files.txt | xargs lychee --verbose --no-progress --exclude-mail
+          find . -type f -name "*.md" > markdown-files.txt
 
-      - name: Save report as artifact (optional)
-        if: failure()
+          # Run lychee and save output
+          xargs lychee --no-progress --exclude-mail --verbose < markdown-files.txt | tee lychee-full-output.txt
+
+      - name: Separate internal and external link results
+        run: |
+          echo "📂 Separating internal and external links..."
+
+          # Extract broken links only
+          grep -A 2 "✗" lychee-full-output.txt > broken-links.txt
+
+          # External: starting with http or https
+          grep -E "http[s]?://" broken-links.txt > external-broken-links.txt || true
+
+          # Internal: anything else (not http(s))
+          grep -vE "http[s]?://" broken-links.txt > internal-broken-links.txt || true
+
+      - name: Print broken external and internal links to log
+        run: |
+          echo "🛑 Broken External Links:"
+          cat external-broken-links.txt || echo "✅ None found."
+
+          echo ""
+          echo "🛑 Broken Internal Links:"
+          cat internal-broken-links.txt || echo "✅ None found."
+
+
+      - name: Upload Broken Links Reports
         uses: actions/upload-artifact@v4
         with:
-          name: broken-links-report
-          path: markdown-files.txt
+          name: broken-link-reports
+          path: |
+            external-broken-links.txt
+            internal-broken-links.txt

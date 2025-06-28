@@ -4,56 +4,56 @@ Welcome to the discussion forum for the Complete Java DSA Mastery Course! This i
 
 ## 📋 Discussion Categories
 
-### 🔧 [Technical Support](./technical-support/)
+### 🔧 [Technical Support](./technical-support.md)
 Having trouble with setup, environment, or tools? Get help here!
 - IDE configuration issues
 - Java development environment setup
 - Git and GitHub problems
 - Course material access
 
-### 💡 [Concept Clarification](./concept-clarification/)
+### 💡 [Concept Clarification](./concept-clarification.md)
 Confused about a concept? Ask for explanations and examples!
 - Data structure explanations
 - Algorithm clarifications
 - Time/space complexity questions
 - Implementation doubts
 
-### 🧩 [Problem Solving Help](./problem-solving/)
+### 🧩 [Problem Solving Help](./problem-solving.md)
 Stuck on a LeetCode problem? Share your approach and get feedback!
 - Problem analysis discussions
 - Multiple solution approaches
 - Optimization techniques
 - Debugging help
 
-### 🎯 [Study Groups](./study-groups/)
+### 🎯 [Study Groups](./study-groups.md)
 Find study partners and form learning groups!
 - Weekly study group formation
 - Practice session coordination
 - Mock interview partners
 - Progress sharing
 
-### 🏢 [Interview Experiences](./interview-experiences/)
+### 🏢 [Interview Experiences](./interview-experiences.md)
 Share your interview experiences and learn from others!
 - Company-specific interview questions
 - Interview preparation strategies
 - Success stories and lessons learned
 - Salary negotiation tips
 
-### 🚀 [Project Showcase](./project-showcase/)
+### 🚀 [Project Showcase](./project-showcase.md)
 Show off your projects and implementations!
 - Custom data structure implementations
 - Algorithm visualizations
 - Problem-solving tools
 - Portfolio projects
 
-### 📚 [Resource Sharing](./resource-sharing/)
+### 📚 [Resource Sharing](./resource-sharing.md)
 Share helpful resources with the community!
 - Useful articles and tutorials
 - YouTube videos and courses
 - Books and documentation
 - Practice platforms
 
-### 💬 [General Discussion](./general-discussion/)
+### 💬 [General Discussion](./general-discussion.md)
 Everything else related to DSA and career development!
 - Career advice
 - Learning strategies
@@ -245,7 +245,7 @@ For a more efficient O(n) solution, consider using a HashMap...
 
 Ready to connect with fellow learners and accelerate your DSA journey? 
 
-**[Start your first discussion →](./general-discussion/)**
+**[Start your first discussion →](./general-discussion.md)**
 
 ---
 

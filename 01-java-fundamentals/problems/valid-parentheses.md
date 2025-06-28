@@ -196,9 +196,9 @@ For string `"([])"``:
 4. Check balanced parentheses with wildcards
 
 ## Related Topics
-- [Stacks](../../04-stacks/README.md)
+- [Stacks](../../06-stacks-queues/README.md)
 - [String Processing](../strings.md)
-- [HashMap Usage](../../07-hash-tables/README.md)
+- [HashMap Usage](../../09-hash-tables/README.md)
 - [Character Arrays](../arrays-1d.md)
 
 ## LeetCode Links
