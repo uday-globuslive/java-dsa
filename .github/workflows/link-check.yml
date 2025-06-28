@@ -1,0 +1,33 @@
+name: Check Markdown Links
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    name: Check for Broken Links in Markdown
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install lychee
+        uses: lycheeverse/lychee-action@v1.8.0
+
+      - name: Run lychee on all Markdown files
+        run: |
+          echo "🔍 Checking links in all .md files..."
+          find . -name "*.md" > markdown-files.txt
+          lychee --verbose --no-progress --exclude-mail --markdown --input markdown-files.txt
+
+      - name: Save report as artifact (optional)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-links-report
+          path: lychee-out.md
