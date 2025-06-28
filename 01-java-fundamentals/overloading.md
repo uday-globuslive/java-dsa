@@ -785,7 +785,7 @@ public class WellDocumentedOverloading {
 - [Methods](./methods.md) - Basic method declaration and structure
 - [Parameters](./parameters.md) - Method parameter details
 - [Return Types](./return-types.md) - Method return values
-- [Constructors](../02-oop-basics/constructors.md) - Constructor overloading
+- [Constructors](../02-oop-concepts/README.md#constructors) - Constructor overloading
 
 ## 🎯 Practice Exercises
 

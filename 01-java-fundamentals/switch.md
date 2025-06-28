@@ -706,7 +706,7 @@ public class SwitchDebugging {
 
 - [Conditional Statements](./conditionals.md) - If-else alternatives
 - [Break and Continue](./break-continue.md) - Loop control statements
-- [Enums](../02-oop-basics/enums.md) - Type-safe constants for switch
+- [Enums](../02-oop-concepts/README.md#enums) - Type-safe constants for switch
 - [Methods](./methods.md) - Extracting switch logic into methods
 
 ## 🎯 Practice Exercises
